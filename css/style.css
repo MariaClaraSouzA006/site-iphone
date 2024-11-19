@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+/* incorpora a font do gloogle fonte */
+
+*{
+    margin: 0;
+    padding: 0;
+    /* list-style bolinhas que ficam no site */
+    list-style: none;
+    box-sizing: border-box;
+    /*box-sizing controla a largura dos elementos conta a largura + o padding*/
+    font-family: "Funnel Sans", sans-serif;
+}
+
+/* :root essa variavel declara a cor e toda a vez que for pegar é so colocar o nome da variavel para não ficar mudando*/
+:root{
+    --color-01: #06C;
+    --color-02: #000;
+    --color-03: #CCC;
+    --color-04: #fff;
+}
+
+/* container segura o site se o usuario diminuir o zoom o site ficara centralizado */
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#cabecalho{
+    background-color: var(--color-02);
+    margin-bottom: 20px;
+}
+
+#cabecalho .container{
+    display: flex;
+    /* justify-content faz com que a logo fique de um lado e o menu do outro */
+    justify-content: space-between;
+    /* align-items: center deixa a logo centralizada e ela não fica esticada */
+    align-items: center;
+}
+
+#cabecalho #logo{
+    width: 30px;
+}
+
+/* menu as letras que fica um do lado do outro */
+#menu ul{
+    /* menu as letras que fica um do lado do outro */
+    display: flex;
+}
+
+/* separa o menupara não ficar colado um no outro */
+#menu ul a{
+    color: var(--color-04);
+    text-decoration: none;
+    display: block;
+    padding: 20px 30px;
+    /* o transition faz uma troca de cor */
+    transition: all 0.3s linear;
+}
+
+#menu ul a:hover{
+    background-color: var(--color-01);
+}
+
+#menu .submenu{
+    position: absolute;
+    display: none;
+    background-color: var(--color-02);
+    z-index: 1;
+    /* z-index controla a camada do position */
+}
+
+/* isso ajuda a exibir a lista quando o mouse passa */
+#menu li:hover .submenu{
+    display: block;
+}
+
+#historia{
+margin-bottom: 50px;
+}
+
+#historia img{
+    width: 400px;
+    border-radius: 30px;
+    float: left;
+    margin-right: 20px;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 30px ;
+}
+
+#historia p{
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+#rodape{
+    text-align: center;
+    color: var(--color-04);
+    padding: 30px;
+    background-color: var(--color-02);
+}
+
+#fotos #galeria{
+    display: grid;
+    /* grid-tamplete-colums define quantas colunas tem */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+    /* gap é o espaçamento entre as fotos */
+    margin-bottom: 50px;
+}
+
+/* faz com que as fotos se ajustem a pagina */
+#fotos #galeria #img{
+    display: block;
+    width: 100%;
+    transition: all 0.3 linear;
+}
+
+/* uma transição para a foto ficar maiorzinha */
+#fotos #galeria img:hover{
+    transform: scale(1.1);
+}
+
+#videos #galeria{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    /* gap é espaçamento */
+    margin-bottom: 50px;
+    /* espaçamento de baixo */
+}
+
+
+#rodape a{
+    color: var(--color-04);
+    text-decoration: none;
+}
+
+#rodape a:hover{
+    text-decoration: underline;
+}
